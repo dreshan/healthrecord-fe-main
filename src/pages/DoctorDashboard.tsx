@@ -195,11 +195,13 @@ export default function DoctorDashboard({ user, onLogout }: DoctorDashboardProps
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                 <p className="text-sm font-semibold text-gray-700 mb-1">Patient Information</p>
                 <p className="text-gray-900 font-medium">
-                  {prescriptionConsultation.patient?.fullName || 'Unknown Patient'}
+                  {prescriptionConsultation.patient?.fullName || prescriptionConsultation.patientName || 'Unknown Patient'}
                 </p>
-                <p className="text-sm text-gray-600">
-                  {prescriptionConsultation.patient?.email}
-                </p>
+                {prescriptionConsultation.patient?.email && (
+                  <p className="text-sm text-gray-600">
+                    {prescriptionConsultation.patient.email}
+                  </p>
+                )}
                 {prescriptionConsultation.patient?.phone && (
                   <p className="text-sm text-gray-600">
                     Phone: {prescriptionConsultation.patient.phone}
@@ -313,11 +315,13 @@ export default function DoctorDashboard({ user, onLogout }: DoctorDashboardProps
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
                 <p className="text-sm font-semibold text-gray-700 mb-1">Patient Information</p>
                 <p className="text-gray-900 font-medium">
-                  {prescriptionConsultation.patient?.fullName || 'Unknown Patient'}
+                  {prescriptionConsultation.patient?.fullName || prescriptionConsultation.patientName || 'Unknown Patient'}
                 </p>
-                <p className="text-sm text-gray-600">
-                  {prescriptionConsultation.patient?.email}
-                </p>
+                {prescriptionConsultation.patient?.email && (
+                  <p className="text-sm text-gray-600">
+                    {prescriptionConsultation.patient.email}
+                  </p>
+                )}
                 {prescriptionConsultation.patient?.phone && (
                   <p className="text-sm text-gray-600">
                     Phone: {prescriptionConsultation.patient.phone}
@@ -429,7 +433,7 @@ export default function DoctorDashboard({ user, onLogout }: DoctorDashboardProps
                         <div className="flex justify-between items-start mb-4">
                           <div className="flex-1">
                             <h3 className="font-bold text-gray-900 text-lg mb-1">
-                              Patient: {consultation.patient ? consultation.patient.fullName : 'Unknown'}
+                              Patient: {consultation.patient?.fullName || consultation.patientName || 'Unknown'}
                             </h3>
                             <p className="text-sm text-gray-500 flex items-center gap-1">
                               <Calendar className="w-4 h-4" />

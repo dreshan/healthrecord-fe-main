@@ -110,6 +110,8 @@ export interface Consultation {
   reply?: string;
   createdAt: string;
   updatedAt: string;
+  patientName?: string;
+  doctorName?: string;
   doctor?: User;
   patient?: User;
 }

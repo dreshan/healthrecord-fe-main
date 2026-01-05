@@ -16,6 +16,8 @@ export const consultationService = {
       status: c.status,
       notes: c.notes,
       reply: c.reply,
+      patientName: c.patientName,
+      doctorName: c.doctorName,
       createdAt: c.createdAt,
       updatedAt: c.updatedAt,
     }));
@@ -35,6 +37,8 @@ export const consultationService = {
       status: c.status,
       notes: c.notes,
       reply: c.reply,
+      patientName: c.patientName,
+      doctorName: c.doctorName,
       createdAt: c.createdAt,
       updatedAt: c.updatedAt,
     }));
@@ -54,6 +58,8 @@ export const consultationService = {
       status: data.status,
       notes: data.notes,
       reply: data.reply,
+      patientName: data.patientName,
+      doctorName: data.doctorName,
       createdAt: data.createdAt,
       updatedAt: data.updatedAt,
     };
@@ -101,6 +107,8 @@ export const consultationService = {
         status: consultation.status,
         notes: consultation.notes,
         reply: consultation.reply,
+        patientName: consultation.patientName,
+        doctorName: consultation.doctorName,
         createdAt: consultation.createdAt,
         updatedAt: consultation.updatedAt,
       };
@@ -128,6 +136,8 @@ export const consultationService = {
       status: consultation.status,
       notes: consultation.notes,
       reply: consultation.reply,
+      patientName: consultation.patientName,
+      doctorName: consultation.doctorName,
       createdAt: consultation.createdAt,
       updatedAt: consultation.updatedAt,
     };
