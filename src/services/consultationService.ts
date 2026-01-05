@@ -78,7 +78,7 @@ export const consultationService = {
     }
 
     const requestPayload = {
-      doctorId: parseInt(data.doctorId),
+      doctorId: data.doctorId,
       symptoms: data.symptoms,
       appointmentDate: formattedDate,
     };
